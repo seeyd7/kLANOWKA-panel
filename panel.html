@@ -15,7 +15,9 @@
     <!-- MyStyles -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
+
     <!-- Menu -->
     <nav id="menu">
         <div class="menu-container">
@@ -56,9 +58,13 @@
             <a href="#">Statystyki zawodników</a>
         </div>
     </nav>
-    <div class="black-overlay"></div>
+    <!-- Menu -->
+
+    <!-- <div class="black-overlay"></div> -->
+
+    <!-- Strona główna -->
     <section class="main-info">
-        <div class="matchscore-container">
+        <div class="mainpage-container">
             <img src="img/mirage.webp">
             <div class="teams-name">
                 <p>Team 1</p>
@@ -69,14 +75,117 @@
                 <p>BO1</p>
             </div>
             <div class="match-result">
-                <p>13 : 5</p>
+                <p>13 : 10</p>
+            </div>
+        </div>
+        <div class="leaderboards">
+            <div class="leaderboard-teams">
+                <h2>Team Leaderboard</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Team Name</th>
+                            <th>Wins</th>
+                            <th>Losses</th>
+                            <th>Round Difference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Eichhörnchen</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td class="round-diff-positive">3</td>
+                        </tr>
+                        <tr>
+                            <td>SHREX</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td class="round-diff-negative">-3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <span>Rows per page: 
+                        <select>
+                            <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>All</option>
+                        </select>
+                    </span>
+                    <span>1-2 of 2</span>
+                </div>
+            </div>
+            <div class="leaderboard-players">
+                <h2>Player Leaderboard</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Total Wins</th>
+                            <th>Kills</th>
+                            <th>Deaths</th>
+                            <th>Assists</th>
+                            <th>Flashbang Assists</th>
+                            <th>Total Rounds Played</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">Nika</a></td>
+                            <td>1</td>
+                            <td>13</td>
+                            <td>10</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>23</td>
+                            <td>0.77</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">seyd</a></td>
+                            <td>0</td>
+                            <td>9</td>
+                            <td>13</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>23</td>
+                            <td>0.57</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <span>Rows per page: 
+                        <select>
+                            <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>All</option>
+                        </select>
+                    </span>
+                    <span>1-2 of 2</span>
+                </div>
             </div>
         </div>
     </section>
+    <!-- Strona główna -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-box">
+          <img src="img/lanowkatransparent.png">
+        </div>
+        <div class="footer-box">
+          <h2>kLanowka - 2025</h2>
+        </div>
+      </footer>
+    <!-- Footer -->
+
     <!-- GoTop -->
     <button id="go2Top" class="fas fa-arrow-up goTop" style="cursor: pointer;"></button>
     <!-- GoTop -->
-    <!-- Scripts -->
+
 	<!-- MyScripts -->
     <script src="scripts/scripts.js"></script>
 </body>
