@@ -88,112 +88,97 @@ input::-webkit-inner-spin-button {
 /* Scrollbar */
 
 /* Menu */
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    padding: 2%;
-    z-index: 9999;
-    transition: .3s linear;
-    height: 10vh;
-    border-bottom: var(--border);
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 2%;
+  z-index: 9999;
+  transition: .3s linear;
+  height: 10vh;
+  border-bottom: var(--border);
 }
+
+.logo {
+  position: absolute;
+  right: 5%;
+}
+
 .logo img {
-    height: 8vh;
-    width: auto;
-    filter: invert(100);
+  height: 8vh;
+  width: auto;
 }
-.menu-toggler{
-    background: none;
-    width: 30px;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    outline: none;
-    z-index: 1000;
-    display: none;
+
+.menu-toggler {
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 1000;
+  display: block; /* Upewniamy się, że menu-toggler jest zawsze widoczny */
 }
-.menu-toggler span{
-    display: block;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
-    position: relative;
-    transition: .3s linear;
+
+.menu-toggler span {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  position: relative;
+  transition: .3s linear;
 }
-.navbar-menu a{
-    font-family: 'Raleway', sans-serif;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    margin-left: 30px;
-    transition: .2s linear;
+
+.navbar-menu {
+  position: fixed;
+  height: 100vh;
+  width: 85%;
+  background: var(--black);
+  top: 10vh;
+  left: -100%;
+  max-width: 400px;
+  padding: 80px 50px;
+  transition: .3s ease-out;
+  z-index: 999;
 }
-.navbar-menu a:hover{
-    color: var(--main-color); 
+
+.navbar-menu a {
+  display: block;
+  font-size: 25px;
+  margin: 30px 0;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  font-weight: 500;
+  transition: .2s linear;
 }
-@media screen and (max-width: 9999px){
-    .home h1 {
-      font-size: 35px;
-    }
-    .menu-toggler{
-      display: block;
-    }
-    nav {
-      position: fixed;
-    }
-    .navbar-menu{
-      position: fixed;
-      height: 100vh;
-      width: 85%;
-      background: var(--black);
-      top: 10vh !important;
-      right: -100%;
-      top: 0;
-      max-width: 400px;
-      padding: 80px 50px;
-      transition: .3s ease-out;
-      z-index: 999;
-    }
-    .navbar-menu a{
-      display: block;
-      font-size: 25px;
-      margin: 30px 0;
-    }
-    .menu-toggler {
-      position: fixed;
-      right: 5%;
-    }
-    .navbar-menu.active{
-      right: 0;
-    }
-    .menu-toggler.active span:nth-child(1){
-      transform: rotate(-45deg);
-      top: 4px;
-    }
-    .menu-toggler.active span:nth-child(2){
-      opacity: 0;
-    }
-    .menu-toggler.active span:nth-child(3){
-      transform: rotate(45deg);
-      bottom: 14px;
-    }
-    .article-holder img {
-      width: 90% !important;
-    }
-    .article-info {
-      padding: 3% !important;
-    }
-    .article-info h2 {
-      text-align: center;
-      font-size: 25px;
-    }
-    .article-info p {
-      text-align: center;
-      font-size: 15px;
-    }
+
+.navbar-menu a:hover {
+  color: var(--main-color);
 }
-/* Menu */
+
+.menu-toggler {
+  position: fixed;
+  left: 5%;
+}
+
+.navbar-menu.active {
+  left: 0;
+}
+
+.menu-toggler.active span:nth-child(1) {
+  transform: rotate(-45deg);
+  top: 4px;
+}
+
+.menu-toggler.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggler.active span:nth-child(3) {
+  transform: rotate(45deg);
+  bottom: 14px;
+}
+
