@@ -9,12 +9,6 @@
     outline: 0 !important;
     text-decoration: none !important;
 }
-:root{
-    --main-color:#6c5ce7;
-    --black:#13131a;
-    --bg:#010103;
-    --border:.1rem solid rgba(255,255,255,.3);
-}
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -87,29 +81,77 @@ input::-webkit-inner-spin-button {
 }
 /* Scrollbar */
 
-/* Menu */
+/* Navbar/menu górne */
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right, #1a1a3d, #2b2b5e);
   width: 100%;
-  padding: 2%;
+  padding: 20px;
   z-index: 9999;
   transition: .3s linear;
-  height: 10vh;
+  height: 8vh;
   border-bottom: var(--border);
 }
 
-.logo {
-  position: absolute;
-  right: 5%;
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.logo img {
-  height: 8vh;
-  width: auto;
+.menu-title {
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Menu boczne */
+.navbar-menu {
+  position: fixed;
+  height: 100vh;
+  width: 85%;
+  background-color: #1b1b2f;
+  top: 0;
+  left: -100%;
+  max-width: 400px;
+  padding: 80px 20px;
+  transition: .3s ease-out;
+  z-index: 999;
+}
+
+.navbar-menu a {
+  display: block;
+  font-size: 18px;
+  margin: 10px 0;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-weight: 400;
+  padding: 12px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.3s ease;
+}
+
+.navbar-menu a:not(.active):hover {
+  color: #00ff99;
+  background-color: rgba(0, 255, 153, 0.1);
+}
+
+.navbar-menu a.active {
+  background-color: #114d4d;
+  color: #00ff99;
+}
+
+.navbar-menu a:focus,
+.navbar-menu a:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-menu.active {
+  left: 0;
 }
 
 .menu-toggler {
@@ -120,7 +162,7 @@ nav {
   position: relative;
   outline: none;
   z-index: 1000;
-  display: block; /* Upewniamy się, że menu-toggler jest zawsze widoczny */
+  display: block;
 }
 
 .menu-toggler span {
@@ -130,42 +172,6 @@ nav {
   margin: 6px 0;
   position: relative;
   transition: .3s linear;
-}
-
-.navbar-menu {
-  position: fixed;
-  height: 100vh;
-  width: 85%;
-  background: var(--black);
-  top: 10vh;
-  left: -100%;
-  max-width: 400px;
-  padding: 80px 50px;
-  transition: .3s ease-out;
-  z-index: 999;
-}
-
-.navbar-menu a {
-  display: block;
-  font-size: 25px;
-  margin: 30px 0;
-  font-family: 'Raleway', sans-serif;
-  color: #fff;
-  font-weight: 500;
-  transition: .2s linear;
-}
-
-.navbar-menu a:hover {
-  color: var(--main-color);
-}
-
-.menu-toggler {
-  position: fixed;
-  left: 5%;
-}
-
-.navbar-menu.active {
-  left: 0;
 }
 
 .menu-toggler.active span:nth-child(1) {
@@ -182,3 +188,86 @@ nav {
   bottom: 14px;
 }
 
+.steam-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 12px 20px;
+  border: 2px solid #00ff99;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.steam-button:hover {
+  background-color: #00ff99;
+  color: #000;
+}
+
+/* Overlay gdy menu otwarte */
+.black-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+/* Overlay gdy menu otwarte */
+
+/* Menu */
+
+/* Strona główna info */
+.main-info {
+  padding: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #10142A, #1B2040);
+  height: 100vh;
+}
+.matchscore-container {
+  padding: 2%;
+  height: 30vh;
+  width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  position: relative;
+  background-color:rgba(255, 255, 255, 0.493);
+}
+
+.matchscore-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  filter: brightness(35%);
+  z-index: 0;
+}
+
+.teams-name {
+  color: white;
+  position: relative;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+.match-mode {
+  color: white;
+  position: relative;
+}
+.match-result {
+  color: white;
+  position: relative;
+  font-size: bold;
+  font-size: 60px;
+}
+/* Strona główna info */
