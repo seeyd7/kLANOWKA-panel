@@ -98,8 +98,7 @@ nav {
   padding: 20px;
   z-index: 9999;
   transition: .3s linear;
-  height: 8vh;
-  border-bottom: var(--border);
+  height: 10vh;
 }
 
 .menu-container {
@@ -226,22 +225,31 @@ nav {
 }
 /* Overlay gdy menu otwarte */
 
+@media screen and (max-width: 450px) {
+  .menu-title {
+    display: none;
+  }
+}
+
 /* Menu */
 
 /* Strona główna info */
 .main-info {
   padding: 3%;
+  padding-top: 12vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   background: linear-gradient(180deg, #10142A, #1B2040);
-  height: 100vh;
+  min-height: 100vh;
 }
-.mainpage-container {
+
+.lastmatch-container {
   padding: 2%;
   height: 27vh;
-  width: 1150px;
+  width: 96%; /* 100% - 2% z lewej i prawej strony */
+  max-width: 1150px; /* Maksymalna szerokość */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -249,10 +257,10 @@ nav {
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  background-color:rgba(255, 255, 255, 0.493);
+  background-color: rgba(255, 255, 255, 0.493);
 }
 
-.mainpage-container img {
+.lastmatch-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -284,9 +292,9 @@ nav {
 /* Strona główna info */
 
 /* Leaderboards */
-
 .leaderboards {
   width: 100%;
+  padding: 3%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -300,6 +308,8 @@ nav {
   width: 45%;
   color: white;
   font-family: Arial, sans-serif;
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 h2 {
@@ -309,6 +319,9 @@ h2 {
 table {
   width: 100%;
   border-collapse: collapse;
+  max-width: 100%;
+  width: 100%;
+  table-layout: fixed;
 }
 
 th, td {
@@ -316,8 +329,14 @@ th, td {
   text-align: left;
 }
 
+td a {
+  text-decoration: none;
+  color: #00ff99;
+}
+
 th {
   background-color: #333;
+  font-size: 12px;
 }
 
 tr:nth-child(odd) {
@@ -328,12 +347,12 @@ tr:nth-child(even) {
   background-color: #1e1e1e;
 }
 
-.round-diff-positive {
-  color: #4caf50; /* Zielony dla wartości dodatnich */
+.diff-positive {
+  color: #4caf50;
 }
 
-.round-diff-negative {
-  color: #f44336; /* Czerwony dla wartości ujemnych */
+.diff-negative {
+  color: #f44336;
 }
 
 .pagination {
@@ -350,20 +369,28 @@ tr:nth-child(even) {
   padding: 5px;
   border-radius: 5px;
 }
-
+@media screen and (max-width: 1680px) {
+  .leaderboards {
+    flex-direction: column;
+  }
+  .leaderboard-teams, .leaderboard-players {
+    width: 90%;
+    margin: 2%;
+  }
+}
 /* Leaderboards */
 
 /* Footer */
 footer {
   padding: 2%;
   background: linear-gradient(to right, #1a1a3d, #2b2b5e);
-  min-height: 8vh;
+  min-height: 12vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 footer img {
-  height: 105px;
+  height: 90px;
   width: auto;
 }
 .footer-box {
