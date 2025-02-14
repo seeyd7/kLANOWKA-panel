@@ -12,7 +12,7 @@ Funkcjonalności:
     id, username i hasło ale możesz tak na prawdę łatwo podszyć się pod kogoś innego więc to pozostanie wyłączone w backendzie a we froncie w ogóle tego nie dodajemy
 
 5. Kontener z meczem na głównej stronie po kliknięciu ma przenosić do "pokoju meczowego / match room" gdzie będą bardziej dokładne statystyki takie jak: które mapy były banowane,
-    rozpoczęcie i zakończenie, demo do pobrania itd". Liczba rund która wygrała mecz ma mieć klase diff-positive a ta która przegrała ma mieć diff-negative
+    rozpoczęcie i zakończenie, demo do pobrania itd". Liczba rund która wygrała mecz ma mieć klase diff-positive a ta która przegrała ma mieć diff-negative. Ilość tych kontenerów widocznych do ustalenia ale myślę, że 1-3 ostatnich meczów. Jeśli mecz będzie w formacie np. BO3 to zamiast wyniku z meczu ma pokazywać się wynik w mapach np 2 - 1.
 
 6. Tabela drużyn oraz zawodników: kliknięcie na nazwe drużyny/zawodnika przenosi do informacji na temat tego zawodnika (statystyki, ostatnie mecze) lub drużyny (informacje o drużynie)
-    członkowie drużyny. Różnica gdy jest dodatnia ma mieć klase diff-positive, gdy jest ujemna to diff-negative, zerowy diff jest niemożliwy ze względu na dogrywki więc go nie uwzględniamy. Rating powyżej 1 dostaje klase diff-positive, poniżej 1 dostaje diff-negative. Strzałka po prawej rozwija subtabelę z bardziej szczegółowymi statystykami zawodnika
+    członkowie drużyny. Różnica gdy jest dodatnia ma mieć klase diff-positive, gdy jest ujemna to diff-negative, zerowy diff jest niemożliwy ze względu na dogrywki więc go nie uwzględniamy. Rating powyżej 1 dostaje klase diff-positive, poniżej 1 dostaje diff-negative. Strzałka po prawej rozwija subtabelę z bardziej szczegółowymi statystykami zawodnika. Tabela ma inny kolor na przemian aby była łatwiejsza do rozczytania

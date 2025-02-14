@@ -15,8 +15,7 @@
 </head>
 
 <body>
-
-    <!-- Menu -->
+    <!-- Menu górne-->
     <nav id="menu">
         <div class="menu-container">
             <button class="menu-toggler">
@@ -42,10 +41,12 @@
             </div>
         </div>
         
-        <!-- Przycisk steam -->
+        <!-- Przycisk zaloguj przez steam -->
         <a href="#" class="steam-button">
             <i class="fa-brands fa-steam fa-lg"></i> Zaloguj się przez Steam
         </a>
+
+        <!-- Menu boczne (podpisana widoczność elementów w zależności czy zalogowany czy nie) -->
         <div class="navbar-menu">
             <!-- Zawsze -->
             <a href="#" class="active">Strona główna</a> 
@@ -73,32 +74,41 @@
             <a href="#">Statystyki zawodników</a>
         </div>
     </nav>
-    <!-- Menu -->
 
     <!-- Przyciemnienie strony gdy menu otwarte -->
-    <!-- <div class="black-overlay"></div> -->
+    <div class="black-overlay"></div>
 
-    <!-- Strona główna -->
+    <!-- Panel główny -->
     <section class="main-info">
+
+        <!-- Ostatnie mecze -->
         <div class="lastmatch-container">
+            <!-- Zdjęcie w tle -->
             <img src="img/mirage.webp">
+            <!-- Nazwy drużyn -->
             <div class="teams-name">
                 <p class="">Team 1</p>
                 <p>VS</p>
                 <p class="">Team 2</p>
             </div>
+            <!-- Typ meczu (1 mapa, 3 mapy, 5 map) -->
             <div class="match-mode">
                 <p>BO1</p>
             </div>
+            <!-- Wynik meczu -->
             <div class="match-result">
                 <p><span class="diff-positive">13</span> - <span class="diff-negative">10</span></p>
             </div>
         </div>
+
+        <!-- Tabele/statystyki -->
         <div class="leaderboards">
+            <!-- Tabela drużyn -->
             <div class="leaderboard-teams">
                 <h2>Tabela drużyn</h2>
                 <div class="table-container">
                     <table>
+                        <!-- Nagłówki dla trybu komputera -->
                         <thead>
                             <tr>
                                 <th>Nazwa drużyny</th>
@@ -108,12 +118,14 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Tabela drużyny 1, dodatkowo posiada nagłówki dla trybu mobilnego -->
                             <tr>
                                 <td data-label="Nazwa drużyny"><a href="#">Eichhörnchen</a></td>
                                 <td data-label="Wygrane">1</td>
                                 <td data-label="Przegrane">0</td>
                                 <td data-label="Różnica rund" class="diff-positive">3</td>
                             </tr>
+                            <!-- Tabela drużyny 2, dodatkowo posiada nagłówki dla trybu mobilnego -->
                             <tr>
                                 <td data-label="Nazwa drużyny"><a href="#">SHREX</a></td>
                                 <td data-label="Wygrane">0</td>
@@ -124,6 +136,7 @@
                     </table>
                 </div>
             
+                <!-- Paginacja -->
                 <div class="pagination">
                     <span>Wierszy na stronę: 
                         <select>
@@ -136,10 +149,13 @@
                     <span>1-2 z 2</span>
                 </div>
             </div>
+
+            <!-- Tabela zawodników -->
             <div class="leaderboard-players">
                 <h2>Tabela zawodników</h2>
                 <div class="table-container">
                     <table>
+                        <!-- Nagłówki dla trybu komputera -->
                         <thead>
                             <tr>
                                 <th>Nick</th>
@@ -154,6 +170,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Tabela ogólna zawodnika 1, dodatkowo posiada naglówki dla trybu mobilnego -->
                             <tr class="player-row">
                                 <td data-label="Nick"><a href="#">Nika</a></td>
                                 <td data-label="Wygrane">1</td>
@@ -167,10 +184,13 @@
                                     <a href="#" class="toggle-details"><i class="fa-solid fa-chevron-down"></i></a>
                                 </td>
                             </tr>
+                            
+                            <!-- Tabela ze szczegółowymi statystykami zawodnika -->
                             <tr class="player-details">
                                 <td colspan="9">
                                     <div class="sub-table-container">
                                         <table class="sub-table">
+                                            <!-- Nagłówki dla trybu komputera -->
                                             <thead>
                                                 <tr>
                                                     <th>Średni damage</th>
@@ -184,6 +204,7 @@
                                                     <th>1v4</th>
                                                 </tr>
                                             </thead>
+                                            <!-- Tabelka z danymi szczegółowymi, dodatkowo posiada nagłówki dla trybu mobilnego -->
                                             <tbody>
                                                 <tr>
                                                     <td data-label="Średni damage">59.57</td>
@@ -204,6 +225,8 @@
                         </tbody>
                     </table>
                 </div>
+
+                <!-- Paginacja -->
                 <div class="pagination">
                     <span>Wierszy na stronę: 
                         <select>
