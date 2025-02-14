@@ -11,9 +11,9 @@
 }
 
 :root{
-  --main-color:#6c5ce7;
+  --main-color:#4a39cf;
   --black:#13131a;
-  --bg:#010103;
+  --bg:rgb(30, 30, 30);
   --border:.1rem solid rgba(255,255,255,.3);
 }
 
@@ -27,13 +27,11 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-/* Main parameters */
+/* Main parameters koniec */
 
 /* Fonts */
-
-/* Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-/* Fonts */
+/* Fonts koniec */
 
 /* Go to top button */
 #go2Top {
@@ -60,7 +58,7 @@ input::-webkit-inner-spin-button {
 #go2Top:hover {
     line-height: 20px !important;
 }
-/* Go to top button */
+/* Go to top button koniec */
 
 /* Scrollbar */
 ::-webkit-scrollbar{
@@ -74,7 +72,7 @@ input::-webkit-inner-spin-button {
     background-color: var(--main-color);
     border-radius: 2;
 }
-/* Scrollbar */
+/* Scrollbar koniec */
 
 /* Navbar/menu górne */
 nav {
@@ -271,8 +269,6 @@ nav {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-/* Overlay gdy menu otwarte */
-
 
 /* Wyłączenie napisu kLanowka poniżej 450px żeby było miejsce na przycisk zaloguj przez steam */
 @media screen and (max-width: 450px) {
@@ -280,25 +276,24 @@ nav {
     display: none;
   }
 }
-/* Menu */
+/* Navbar/menu górne koniec */
 
 /* Strona główna info */
 .main-info {
-  padding: 3%;
   padding-top: 12vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   background: linear-gradient(180deg, #10142A, #1B2040);
-  min-height: 100vh;
+  min-height: 84vh;
 }
 
 .lastmatch-container {
-  padding: 2%;
+  padding: 3%;
   height: 27vh;
-  width: 96%;
-  max-width: 1150px;
+  width: 90%;
+  max-width: 1100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -338,12 +333,10 @@ nav {
   font-size: bold;
   font-size: 60px;
 }
-/* Strona główna info */
+/* Strona główna info koniec */
 
 
 /* Leaderboars */
-
-/* Stylizacja kontenera */
 .leaderboards {
     width: 100%;
     padding: 3%;
@@ -537,6 +530,7 @@ tr:nth-child(even) {
   padding: 5px;
   border-radius: 5px;
 }
+/* Leaderboards koniec */
 
 /* Footer */
 footer {
@@ -578,4 +572,4 @@ footer img {
       width: 100%;
   }
 }
-/* Footer */
+/* Footer koniec */
