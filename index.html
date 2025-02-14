@@ -26,6 +26,23 @@
             </button>
             <span class="menu-title">kLanowka</span>
         </div>
+
+        <!-- Wybór języka -->
+        <div class="language-selector">
+            <div class="selected-language">
+                <img src="img/pl.png" alt="Polski">
+            </div>
+            <div class="language-dropdown">
+                <div class="language-option">
+                    <img src="img/us.png" alt="English"> English
+                </div>
+                <div class="language-option">
+                    <img src="img/pl.png" alt="Polski"> Polski
+                </div>
+            </div>
+        </div>
+        
+        <!-- Przycisk steam -->
         <a href="#" class="steam-button">
             <i class="fa-brands fa-steam fa-lg"></i> Zaloguj się przez Steam
         </a>
@@ -58,7 +75,8 @@
     </nav>
     <!-- Menu -->
 
-    <div class="black-overlay"></div>
+    <!-- Przyciemnienie strony gdy menu otwarte -->
+    <!-- <div class="black-overlay"></div> -->
 
     <!-- Strona główna -->
     <section class="main-info">
@@ -91,13 +109,13 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Nazwa drużyny">Eichhörnchen</td>
+                                <td data-label="Nazwa drużyny"><a href="#">Eichhörnchen</a></td>
                                 <td data-label="Wygrane">1</td>
                                 <td data-label="Przegrane">0</td>
                                 <td data-label="Różnica rund" class="diff-positive">3</td>
                             </tr>
                             <tr>
-                                <td data-label="Nazwa drużyny">SHREX</td>
+                                <td data-label="Nazwa drużyny"><a href="#">SHREX</a></td>
                                 <td data-label="Wygrane">0</td>
                                 <td data-label="Przegrane">1</td>
                                 <td data-label="Różnica rund" class="diff-negative">-3</td>
@@ -129,66 +147,63 @@
                                 <th>Zabójstwa</th>
                                 <th>Śmierci</th>
                                 <th>Asysty</th>
-                                <th>Asysty fleszowe</th>
+                                <th>Asysty flash</th>
                                 <th>Rozegrane rundy</th>
                                 <th>Rating</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr class="player-row">
                                 <td data-label="Nick"><a href="#">Nika</a></td>
                                 <td data-label="Wygrane">1</td>
                                 <td data-label="Zabójstwa">13</td>
                                 <td data-label="Śmierci">10</td>
                                 <td data-label="Asysty">4</td>
-                                <td data-label="Asysty fleszowe">2</td>
+                                <td data-label="Asysty flash">2</td>
                                 <td data-label="Rozegrane rundy">23</td>
                                 <td data-label="Rating" class="diff-positive">1.55</td>
+                                <td>
+                                    <a href="#" class="toggle-details"><i class="fa-solid fa-chevron-down"></i></a>
+                                </td>
                             </tr>
-                            <tr>
-                                <td data-label="Nick"><a href="#">seyd</a></td>
-                                <td data-label="Wygrane">1</td>
-                                <td data-label="Zabójstwa">9</td>
-                                <td data-label="Śmierci">13</td>
-                                <td data-label="Asysty">5</td>
-                                <td data-label="Asysty fleszowe">9</td>
-                                <td data-label="Rozegrane rundy">23</td>
-                                <td data-label="Rating" class="diff-negative">0.97</td>
-                            </tr>
-                            <tr>
-                                <td data-label="Nick"><a href="#">hkk</a></td>
-                                <td data-label="Wygrane">1</td>
-                                <td data-label="Zabójstwa">9</td>
-                                <td data-label="Śmierci">13</td>
-                                <td data-label="Asysty">5</td>
-                                <td data-label="Asysty fleszowe">9</td>
-                                <td data-label="Rozegrane rundy">23</td>
-                                <td data-label="Rating" class="diff-negative">0.97</td>
-                            </tr>
-                            <tr>
-                                <td data-label="Nick"><a href="#">harpun</a></td>
-                                <td data-label="Wygrane">1</td>
-                                <td data-label="Zabójstwa">9</td>
-                                <td data-label="Śmierci">13</td>
-                                <td data-label="Asysty">5</td>
-                                <td data-label="Asysty fleszowe">9</td>
-                                <td data-label="Rozegrane rundy">23</td>
-                                <td data-label="Rating" class="diff-negative">0.97</td>
-                            </tr>
-                            <tr>
-                                <td data-label="Nick"><a href="#">poliNT</a></td>
-                                <td data-label="Wygrane">1</td>
-                                <td data-label="Zabójstwa">9</td>
-                                <td data-label="Śmierci">13</td>
-                                <td data-label="Asysty">5</td>
-                                <td data-label="Asysty fleszowe">9</td>
-                                <td data-label="Rozegrane rundy">23</td>
-                                <td data-label="Rating" class="diff-negative">0.97</td>
+                            <tr class="player-details">
+                                <td colspan="9">
+                                    <div class="sub-table-container">
+                                        <table class="sub-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Średni damage</th>
+                                                    <th>Headshot%</th>
+                                                    <th>Asy</th>
+                                                    <th>Poczwórne</th>
+                                                    <th>Potrójne</th>
+                                                    <th>Podwójne</th>
+                                                    <th>Pojedyncze</th>
+                                                    <th>1v5</th>
+                                                    <th>1v4</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Średni damage">59.57</td>
+                                                    <td data-label="Headshot%">53.85</td>
+                                                    <td data-label="Asy">0</td>
+                                                    <td data-label="Poczwórne">0</td>
+                                                    <td data-label="Potrójne">0</td>
+                                                    <td data-label="Podwójne">0</td>
+                                                    <td data-label="Pojedyncze">0</td>
+                                                    <td data-label="1v5">0</td>
+                                                    <td data-label="1v4">0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-            
                 <div class="pagination">
                     <span>Wierszy na stronę: 
                         <select>
@@ -200,8 +215,7 @@
                     </span>
                     <span>1-2 z 2</span>
                 </div>
-            </div>
-            
+            </div>          
         </div>
     </section>
     <!-- Strona główna -->

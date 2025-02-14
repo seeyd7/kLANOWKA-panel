@@ -182,6 +182,64 @@ nav {
   bottom: 14px;
 }
 
+.language-selector {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Wybrany język */
+.selected-language {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  color: white;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.selected-language img {
+  width: 24px;
+  height: 16px;
+}
+
+/* Lista języków*/
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(30, 30, 30);
+  border-radius: 5px;
+  padding: 5px 0;
+  list-style: none;
+  width: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: none;
+}
+
+/* Opcje językowe */
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+/* Flagi w liście wyboru */
+.language-option img {
+  width: 24px;
+  height: 16px;
+}
+
+/* Pokaż listę języków po najechaniu */
+.language-selector:hover .language-dropdown {
+  display: block;
+}
+
 /* Przycisk zaloguj przez steam */
 .steam-button {
   display: flex;
@@ -282,98 +340,87 @@ nav {
 }
 /* Strona główna info */
 
+
 /* Leaderboars */
+
+/* Stylizacja kontenera */
 .leaderboards {
-  width: 100%;
-  padding: 3%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
+    width: 100%;
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .leaderboard-teams, .leaderboard-players {
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 8px;
-  width: 45%;
-  color: white;
-  font-family: Arial, sans-serif;
-  max-width: 100%;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    color: white;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
 }
 
 h2 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
+/* Stylizacja tabeli */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  max-width: 100%;
-  table-layout: auto;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
 
+/* Stylizacja nagłówków i komórek */
 th, td {
-  padding: 10px;
-  text-align: left;
+    padding: 10px;
+    text-align: left;
+    word-wrap: break-word;
 }
 
 td a {
-  text-decoration: none;
-  color: #00ff99;
+    text-decoration: none;
+    color: #00ff99;
 }
 
 th {
-  background-color: #333;
-  font-size: 12px;
+    background-color: #333;
+    font-size: 12px;
 }
 
 tr:nth-child(odd) {
-  background-color: #252525;
+    background-color: #252525;
 }
 
 tr:nth-child(even) {
-  background-color: #1e1e1e;
+    background-color: #1e1e1e;
 }
 
 .diff-positive {
-  color: #4caf50;
+    color: #4caf50;
 }
 
 .diff-negative {
-  color: #f44336;
+    color: #f44336;
 }
 
-/* Paginacja */
-.pagination {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-}
-
-.pagination select {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-/* Tabele układają się w kolumne poniżej 1680px */
+/* Tabele układają się w kolumnę poniżej 1680px */
 @media screen and (max-width: 1680px) {
-  .leaderboards {
-    flex-direction: column;
-  }
-  .leaderboard-teams, .leaderboard-players {
-    width: 90%;
-    margin: 2%;
-  }
+    .leaderboards {
+        flex-direction: column;
+    }
+    .leaderboard-teams, .leaderboard-players {
+        width: 90%;
+        margin: 2%;
+    }
 }
 
-/* Tabela zamienia się w tabelę pionową poniżęj 680px */
-@media screen and (max-width: 680px) {
+/* Tabela zamienia się w wersję mobilną poniżej 720px */
+@media screen and (max-width: 720px) {
   table, thead, tbody, th, td, tr {
       display: block;
   }
@@ -405,8 +452,91 @@ tr:nth-child(even) {
       content: attr(data-label);
       font-weight: bold;
   }
+
 }
-/* Leaderboards */
+
+/* Stylizacja rozwijanej podtabeli */
+.player-details {
+    display: none;
+}
+
+.player-details.active {
+    display: table-row;
+}
+
+/* Stylizacja podtabeli */
+.sub-table-container {
+    overflow-x: auto;
+}
+
+.sub-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sub-table th, .sub-table td {
+    padding: 8px;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+  .player-details {
+    border: none;
+  }
+  .player-row {
+    margin: 0;
+  }
+  .sub-table th, .sub-table td {
+    border: none;
+  }
+  .player-details.active {
+    display: flex;
+}
+  .player-details td {
+    width: 100%;
+  }
+  .sub-table-container {
+    width: 100%;
+  }
+}
+
+/* Stylizacja ikony strzałki */
+.toggle-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.toggle-details i {
+  display: inline-block;
+  transition: 0.3s ease-out;
+  will-change: transform;
+}
+
+/* Obracanie ikony po kliknięciu */
+.toggle-details.active i {
+  transform: rotate(180deg);
+}
+
+/* Paginacja */
+.pagination {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.pagination select {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
 
 /* Footer */
 footer {

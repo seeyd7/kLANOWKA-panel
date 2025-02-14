@@ -1,0 +1,18 @@
+Funkcjonalności:
+
+1. Menu ma rozwijać się w taki sposób jak na szablonie, z lewej strony musi wysunąć się panel a menu hamburgerowe ma zamienić się w X (to ogarnia CSS)
+    Aktywny element ma mieć klasę active i wyróżniać się (zielone tło i tekst)
+
+2. Wybór języka: będą do wyboru dwa języki polski i angielski, aktualnie po najechaniu pojawia się dropdown, po wybraniu innego języka niż aktywny zmieni się język strony.
+    Uważam ten feature za opcjonalny, jeśli mamy wyjebane w ten angielski to można to po prostu wyjebać
+
+3. Przycisk Go2Top ma pojawiać się już po delikatnym zescrollowaniu na dół i ma przenosić na góre bieżącej strony
+
+4. Zaloguj się przez steam będzie musiał mieć podpięte API tak jak na tambym panelu, tamten panel oferuje również możliwość logowania lokalnego gdzie podajesz tylko steam 
+    id, username i hasło ale możesz tak na prawdę łatwo podszyć się pod kogoś innego więc to pozostanie wyłączone w backendzie a we froncie w ogóle tego nie dodajemy
+
+5. Kontener z meczem na głównej stronie po kliknięciu ma przenosić do "pokoju meczowego / match room" gdzie będą bardziej dokładne statystyki takie jak: które mapy były banowane,
+    rozpoczęcie i zakończenie, demo do pobrania itd". Liczba rund która wygrała mecz ma mieć klase diff-positive a ta która przegrała ma mieć diff-negative
+
+6. Tabela drużyn oraz zawodników: kliknięcie na nazwe drużyny/zawodnika przenosi do informacji na temat tego zawodnika (statystyki, ostatnie mecze) lub drużyny (informacje o drużynie)
+    członkowie drużyny. Różnica gdy jest dodatnia ma mieć klase diff-positive, gdy jest ujemna to diff-negative, zerowy diff jest niemożliwy ze względu na dogrywki więc go nie uwzględniamy. Rating powyżej 1 dostaje klase diff-positive, poniżej 1 dostaje diff-negative. Strzałka po prawej rozwija subtabelę z bardziej szczegółowymi statystykami zawodnika

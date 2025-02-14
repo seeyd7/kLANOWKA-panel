@@ -46,3 +46,21 @@ document.addEventListener("click", (event) => {
     blackOverlay.style.pointerEvents = "none";
   }
 });
+
+
+// Podtabela i strzałka
+document.querySelectorAll('.toggle-details').forEach(button => {
+  button.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      let playerRow = this.closest('tr');
+      let detailsRow = playerRow.nextElementSibling;
+
+      // Zmiana widoczności podtabeli
+      detailsRow.classList.toggle('active');
+
+      // Obracanie strzałki
+      this.classList.toggle('active');
+  });
+});
+
