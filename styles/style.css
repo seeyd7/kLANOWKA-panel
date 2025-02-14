@@ -260,6 +260,14 @@ nav {
   color: #000;
 }
 
+@media screen and (max-width: 720px) {
+  .steam-button {
+    gap: 10px;
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+
 /* Przyciemnienie gdy menu otwarte */
 .black-overlay {
   background-color: rgba(0, 0, 0, 0.3);
