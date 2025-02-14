@@ -9,40 +9,28 @@
     outline: 0 !important;
     text-decoration: none !important;
 }
+
 :root{
   --main-color:#6c5ce7;
   --black:#13131a;
   --bg:#010103;
   --border:.1rem solid rgba(255,255,255,.3);
 }
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-/* input[type=number] {
-    -moz-appearance: textfield;
-} */
-.btn-default {
-    position: relative;
-    color: white;
-    background: var(--main-color);
-    padding: 10px 40px 10px 40px;
-    margin-top: 1vh;
-    transition: .4s; 
-}
-.btn-default:hover {
-    background: #5140d4;
-    color: white;
-    padding: 10px 60px 10px 60px;
-}
 /* Main parameters */
 
 /* Fonts */
+
 /* Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 /* Fonts */
@@ -68,6 +56,7 @@ input::-webkit-inner-spin-button {
     justify-content: center;
     opacity: 0;
 }
+
 #go2Top:hover {
     line-height: 20px !important;
 }
@@ -113,7 +102,7 @@ nav {
   font-family: 'Raleway', sans-serif;
 }
 
-/* Menu boczne */
+/* Menu boczne rozsuwane */
 .navbar-menu {
   position: fixed;
   height: 100vh;
@@ -193,6 +182,7 @@ nav {
   bottom: 14px;
 }
 
+/* Przycisk zaloguj przez steam */
 .steam-button {
   display: flex;
   align-items: center;
@@ -214,7 +204,7 @@ nav {
   color: #000;
 }
 
-/* Overlay gdy menu otwarte */
+/* Przyciemnienie gdy menu otwarte */
 .black-overlay {
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
@@ -225,12 +215,13 @@ nav {
 }
 /* Overlay gdy menu otwarte */
 
+
+/* Wyłączenie napisu kLanowka poniżej 450px żeby było miejsce na przycisk zaloguj przez steam */
 @media screen and (max-width: 450px) {
   .menu-title {
     display: none;
   }
 }
-
 /* Menu */
 
 /* Strona główna info */
@@ -248,8 +239,8 @@ nav {
 .lastmatch-container {
   padding: 2%;
   height: 27vh;
-  width: 96%; /* 100% - 2% z lewej i prawej strony */
-  max-width: 1150px; /* Maksymalna szerokość */
+  width: 96%;
+  max-width: 1150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,7 +282,7 @@ nav {
 }
 /* Strona główna info */
 
-/* Leaderboards */
+/* Leaderboars */
 .leaderboards {
   width: 100%;
   padding: 3%;
@@ -299,6 +290,7 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .leaderboard-teams, .leaderboard-players {
@@ -308,7 +300,6 @@ nav {
   width: 45%;
   color: white;
   font-family: Arial, sans-serif;
-  overflow-x: auto;
   max-width: 100%;
 }
 
@@ -320,8 +311,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   max-width: 100%;
-  width: 100%;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 th, td {
@@ -355,6 +345,7 @@ tr:nth-child(even) {
   color: #f44336;
 }
 
+/* Paginacja */
 .pagination {
   margin-top: 10px;
   display: flex;
@@ -369,6 +360,8 @@ tr:nth-child(even) {
   padding: 5px;
   border-radius: 5px;
 }
+
+/* Tabele układają się w kolumne poniżej 1680px */
 @media screen and (max-width: 1680px) {
   .leaderboards {
     flex-direction: column;
@@ -376,6 +369,41 @@ tr:nth-child(even) {
   .leaderboard-teams, .leaderboard-players {
     width: 90%;
     margin: 2%;
+  }
+}
+
+/* Tabela zamienia się w tabelę pionową poniżęj 680px */
+@media screen and (max-width: 680px) {
+  table, thead, tbody, th, td, tr {
+      display: block;
+  }
+
+  thead {
+      display: none;
+  }
+
+  tr {
+      margin-bottom: 15px;
+      border: 1px solid #333;
+      padding: 10px;
+      border-radius: 5px;
+      background: #1e1e1e;
+  }
+
+  td {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      border-bottom: 1px solid #444;
+  }
+
+  td:last-child {
+      border-bottom: none;
+  }
+
+  td::before {
+      content: attr(data-label);
+      font-weight: bold;
   }
 }
 /* Leaderboards */
@@ -389,10 +417,12 @@ footer {
   justify-content: space-evenly;
   align-items: center;
 }
+
 footer img {
   height: 90px;
   width: auto;
 }
+
 .footer-box {
   height: 8vh;
   width: 50%;
@@ -403,9 +433,12 @@ footer img {
   text-align: center;
   color: white;
 }
+
 .footer-box h2 {
   font-size: 20px;
 }
+
+/* Ułożenie elementów footera w kolumne poniżej 780px */
 @media screen and (max-width: 780px) {
   footer {
       flex-direction: column;

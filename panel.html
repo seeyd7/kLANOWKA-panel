@@ -60,51 +60,54 @@
     </nav>
     <!-- Menu -->
 
-    <!-- <div class="black-overlay"></div> -->
+    <div class="black-overlay"></div>
 
     <!-- Strona główna -->
     <section class="main-info">
         <div class="lastmatch-container">
             <img src="img/mirage.webp">
             <div class="teams-name">
-                <p>Team 1</p>
+                <p class="">Team 1</p>
                 <p>VS</p>
-                <p>Team 2</p>
+                <p class="">Team 2</p>
             </div>
             <div class="match-mode">
                 <p>BO1</p>
             </div>
             <div class="match-result">
-                <p>13 : 10</p>
+                <p><span class="diff-positive">13</span> - <span class="diff-negative">10</span></p>
             </div>
         </div>
         <div class="leaderboards">
             <div class="leaderboard-teams">
                 <h2>Tabela drużyn</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nazwa drużyny</th>
-                            <th>Wygrane</th>
-                            <th>Przegrane</th>
-                            <th>Różnica rund</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Eichhörnchen</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td class="diff-positive">3</td>
-                        </tr>
-                        <tr>
-                            <td>SHREX</td>
-                            <td>0</td>
-                            <td>1</td>
-                            <td class="diff-negative">-3</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nazwa drużyny</th>
+                                <th>Wygrane</th>
+                                <th>Przegrane</th>
+                                <th>Różnica rund</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Nazwa drużyny">Eichhörnchen</td>
+                                <td data-label="Wygrane">1</td>
+                                <td data-label="Przegrane">0</td>
+                                <td data-label="Różnica rund" class="diff-positive">3</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Nazwa drużyny">SHREX</td>
+                                <td data-label="Wygrane">0</td>
+                                <td data-label="Przegrane">1</td>
+                                <td data-label="Różnica rund" class="diff-negative">-3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
                 <div class="pagination">
                     <span>Wierszy na stronę: 
                         <select>
@@ -119,103 +122,75 @@
             </div>
             <div class="leaderboard-players">
                 <h2>Tabela zawodników</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nick</th>
-                            <th>Wygrane</th>
-                            <th>Zabójstwa</th>
-                            <th>Śmierci</th>
-                            <th>Asysty</th>
-                            <th>Asysty fleszowe</th>
-                            <th>Rozegrane rundy</th>
-                            <th>Rating</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="#">Nika</a></td>
-                            <!-- Wygrane -->
-                            <td>1</td>
-                            <!-- Zabójstwa -->
-                            <td>13</td>
-                            <!-- Śmierci -->
-                            <td>10</td>
-                            <!-- Asysty -->
-                            <td>4</td>
-                            <!-- Asysty fleszowe -->
-                            <td>2</td>
-                            <!-- Rozegrane rundy -->
-                            <td>23</td>
-                            <!-- Rating -->
-                            <td class="diff-positive">1.55</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">seyd</a></td>
-                            <!-- Wygrane -->
-                            <td>1</td>
-                            <!-- Zabójstwa -->
-                            <td>9</td>
-                            <!-- Śmierci -->
-                            <td>13</td>
-                            <!-- Asysty -->
-                            <td>5</td>
-                            <!-- Asysty fleszowe -->
-                            <td>9</td>
-                            <!-- Rozegrane rundy -->
-                            <td>23</td>
-                            <td class="diff-negative">0.97</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">hkk</a></td>
-                            <!-- Wygrane -->
-                            <td>1</td>
-                            <!-- Zabójstwa -->
-                            <td>9</td>
-                            <!-- Śmierci -->
-                            <td>13</td>
-                            <!-- Asysty -->
-                            <td>5</td>
-                            <!-- Asysty fleszowe -->
-                            <td>9</td>
-                            <!-- Rozegrane rundy -->
-                            <td>23</td>
-                            <td class="diff-negative">0.97</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">harpun</a></td>
-                            <!-- Wygrane -->
-                            <td>1</td>
-                            <!-- Zabójstwa -->
-                            <td>9</td>
-                            <!-- Śmierci -->
-                            <td>13</td>
-                            <!-- Asysty -->
-                            <td>5</td>
-                            <!-- Asysty fleszowe -->
-                            <td>9</td>
-                            <!-- Rozegrane rundy -->
-                            <td>23</td>
-                            <td class="diff-negative">0.97</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">poliNT</a></td>
-                            <!-- Wygrane -->
-                            <td>1</td>
-                            <!-- Zabójstwa -->
-                            <td>9</td>
-                            <!-- Śmierci -->
-                            <td>13</td>
-                            <!-- Asysty -->
-                            <td>5</td>
-                            <!-- Asysty fleszowe -->
-                            <td>9</td>
-                            <!-- Rozegrane rundy -->
-                            <td>23</td>
-                            <td class="diff-negative">0.97</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nick</th>
+                                <th>Wygrane</th>
+                                <th>Zabójstwa</th>
+                                <th>Śmierci</th>
+                                <th>Asysty</th>
+                                <th>Asysty fleszowe</th>
+                                <th>Rozegrane rundy</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Nick"><a href="#">Nika</a></td>
+                                <td data-label="Wygrane">1</td>
+                                <td data-label="Zabójstwa">13</td>
+                                <td data-label="Śmierci">10</td>
+                                <td data-label="Asysty">4</td>
+                                <td data-label="Asysty fleszowe">2</td>
+                                <td data-label="Rozegrane rundy">23</td>
+                                <td data-label="Rating" class="diff-positive">1.55</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Nick"><a href="#">seyd</a></td>
+                                <td data-label="Wygrane">1</td>
+                                <td data-label="Zabójstwa">9</td>
+                                <td data-label="Śmierci">13</td>
+                                <td data-label="Asysty">5</td>
+                                <td data-label="Asysty fleszowe">9</td>
+                                <td data-label="Rozegrane rundy">23</td>
+                                <td data-label="Rating" class="diff-negative">0.97</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Nick"><a href="#">hkk</a></td>
+                                <td data-label="Wygrane">1</td>
+                                <td data-label="Zabójstwa">9</td>
+                                <td data-label="Śmierci">13</td>
+                                <td data-label="Asysty">5</td>
+                                <td data-label="Asysty fleszowe">9</td>
+                                <td data-label="Rozegrane rundy">23</td>
+                                <td data-label="Rating" class="diff-negative">0.97</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Nick"><a href="#">harpun</a></td>
+                                <td data-label="Wygrane">1</td>
+                                <td data-label="Zabójstwa">9</td>
+                                <td data-label="Śmierci">13</td>
+                                <td data-label="Asysty">5</td>
+                                <td data-label="Asysty fleszowe">9</td>
+                                <td data-label="Rozegrane rundy">23</td>
+                                <td data-label="Rating" class="diff-negative">0.97</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Nick"><a href="#">poliNT</a></td>
+                                <td data-label="Wygrane">1</td>
+                                <td data-label="Zabójstwa">9</td>
+                                <td data-label="Śmierci">13</td>
+                                <td data-label="Asysty">5</td>
+                                <td data-label="Asysty fleszowe">9</td>
+                                <td data-label="Rozegrane rundy">23</td>
+                                <td data-label="Rating" class="diff-negative">0.97</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
                 <div class="pagination">
                     <span>Wierszy na stronę: 
                         <select>
@@ -228,6 +203,7 @@
                     <span>1-2 z 2</span>
                 </div>
             </div>
+            
         </div>
     </section>
     <!-- Strona główna -->
